@@ -1,0 +1,30 @@
+8 global variables
+    reset flag
+    min max for measured values
+    terminalPrompt
+
+make .cpp and .h files for remote terminal
+
+include .h file at top of Lab4.ino
+
+set .prev and .next of all modules to NULL
+
+pass pointers to TCBs
+
+
+
+
+// worry about flags to other modules later
+if there is not terminal prompt
+    print out terminal
+    terminal prompt = TRUE
+else 
+    if reading 1
+        then reset flag
+    else if reading 2
+        print min and max current
+    else if reading 3
+
+    else if reading 4
+
+    terminal prompt = FALSE;

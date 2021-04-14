@@ -1,0 +1,242 @@
+<mxfile host="app.diagrams.net" modified="2021-03-02T07:45:12.616Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36" etag="TAx6-15vaLRYj9A5o6xS" version="14.4.3" type="github">
+  <diagram id="4b9iy-e2C1Di-0exKd9a" name="Page-1">
+    <mxGraphModel dx="1368" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-1" value="Task Control Block" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="120" width="160" height="150" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-2" value="- Pointer to Function Data" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-1" vertex="1">
+          <mxGeometry y="26" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-3" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-1" vertex="1">
+          <mxGeometry y="50" width="160" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-4" value="+ Function Pointer&#xa;&#xa;+ Pointer to next TCB&#xa;&#xa;+ Pointer to prev TCB" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-1" vertex="1">
+          <mxGeometry y="60" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-6" value="Measure" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry y="580" width="160" height="290" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-7" value="- Current&#xa;&#xa;- Voltage&#xa;&#xa;- Temperature&#xa;&#xa;- HV Interlock Loop" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-6" vertex="1">
+          <mxGeometry y="26" width="160" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-8" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-6" vertex="1">
+          <mxGeometry y="140" width="160" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-9" value="+ updateCurrent()&#xa;&#xa;+ updateVoltage()&#xa;&#xa;+ updateTemperature()&#xa;&#xa;+ updateHVIL()&#xa;&#xa;+  HVILinterrupt()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-6" vertex="1">
+          <mxGeometry y="150" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-11" value="Scheduler" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="120" width="160" height="470" as="geometry">
+            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-12" value="- Current&#xa;&#xa;- Voltage&#xa;&#xa;- Temperature&#xa;&#xa;- HV Interlock Loop&#xa;&#xa;-Contacotr&#xa;- Alarm States&#xa;&#xa;- Historical Min/Max " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-11" vertex="1">
+          <mxGeometry y="26" width="160" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-13" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-11" vertex="1">
+          <mxGeometry y="210" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-14" value="+ loop()&#xa;&#xa;+ measure()&#xa;&#xa;+ display()&#xa;&#xa;+ touchInput()&#xa;&#xa;+ stateCharge()&#xa;&#xa;+ contactor()&#xa;&#xa;+ alarm()&#xa;&#xa;+ dataLog()&#xa;&#xa;+ remoteTerminal()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-11" vertex="1">
+          <mxGeometry y="218" width="160" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-15" value="" style="endArrow=diamondThin;shadow=0;strokeWidth=1;rounded=0;endFill=0;edgeStyle=elbowEdgeStyle;elbow=vertical;endSize=20;" parent="1" source="RvLsSPAhDAN_56T7TWkN-1" target="RvLsSPAhDAN_56T7TWkN-11" edge="1">
+          <mxGeometry x="0.5" y="41" relative="1" as="geometry">
+            <mxPoint x="380" y="192" as="sourcePoint" />
+            <mxPoint x="540" y="192" as="targetPoint" />
+            <mxPoint x="-40" y="32" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-16" value="Display" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="230" y="330" width="160" height="420" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-17" value="- Current&#xa;&#xa;- Voltage&#xa;&#xa;- Temperature&#xa;&#xa;- HV Interlock Loop&#xa;&#xa;- HV Interlock Alarm&#xa;&#xa;- Overcurrent&#xa;&#xa;- Voltage Out of Range&#xa;&#xa;- State of Charge&#xa;&#xa;- Touchscreen Feedback&#xa;&#xa;- Contactor Flag&#xa;&#xa;- Acknowledge Alarm" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-16" vertex="1">
+          <mxGeometry y="26" width="160" height="304" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-18" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-16" vertex="1">
+          <mxGeometry y="330" width="160" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-19" value="+ updateDisplay()&#xa;&#xa;+ makeButtons()&#xa;&#xa;+ setFormat()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-16" vertex="1">
+          <mxGeometry y="340" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-20" value="Alarm" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry y="120" width="160" height="150" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-21" value="- HV Interlock Alarm&#xa;&#xa;- Overcurrent&#xa;&#xa;- Voltage Out of Range" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-20" vertex="1">
+          <mxGeometry y="26" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-22" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-20" vertex="1">
+          <mxGeometry y="110" width="160" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-23" value="+ updateAlarms()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-20" vertex="1">
+          <mxGeometry y="120" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-25" value="Touch Input" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="420" y="700" width="160" height="200" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-26" value="- Battery ON/OFF Toggle&#xa;&#xa;- Variable for Screen #&#xa;&#xa;- Acknowledge Alarm" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-25" vertex="1">
+          <mxGeometry y="26" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-27" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-25" vertex="1">
+          <mxGeometry y="110" width="160" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-28" value="+ Battery()&#xa;&#xa;+ Display()&#xa;&#xa;+ recieveInput()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-25" vertex="1">
+          <mxGeometry y="120" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-29" value="Contactor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="780" width="160" height="120" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-30" value="- Contactor Flag&#xa;&#xa;- Alarm States" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-29" vertex="1">
+          <mxGeometry y="26" width="160" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-31" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-29" vertex="1">
+          <mxGeometry y="80" width="160" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-32" value="- updateContactor()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-29" vertex="1">
+          <mxGeometry y="90" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-33" value="State of Charge" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry y="290" width="160" height="270" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-34" value="- State of Charge&#xa;&#xa;- Current&#xa;&#xa;- Voltage&#xa;&#xa;- Temperature&#xa;&#xa;- 2-D Data Table" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-33" vertex="1">
+          <mxGeometry y="26" width="160" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-35" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-33" vertex="1">
+          <mxGeometry y="160" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-36" value="+ updateSOC()&#xa;&#xa;+ interpolate()&#xa;&#xa;+findBoundaries()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-33" vertex="1">
+          <mxGeometry y="180" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-37" value="" style="endArrow=none;html=1;strokeWidth=1;endFill=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="190" as="sourcePoint" />
+            <mxPoint x="190" y="810" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-39" value="" style="endArrow=none;html=1;strokeWidth=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="192.5" y="300" as="sourcePoint" />
+            <mxPoint x="420" y="300.42" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-40" value="Startup " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="120" width="160" height="290" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-41" value="- Timers&#xa;&#xa;- GPIO&#39;s&#xa;&#xa;- Comm protocols&#xa;&#xa;- Interrupts&#xa;&#xa;- Task data structs&#xa;&#xa;- Task data blocks&#xa;&#xa;- All Global Variables&#xa;&#xa;- EEPROM" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-40" vertex="1">
+          <mxGeometry y="26" width="160" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-42" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-40" vertex="1">
+          <mxGeometry y="250" width="160" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="RvLsSPAhDAN_56T7TWkN-43" value="+ setup()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="RvLsSPAhDAN_56T7TWkN-40" vertex="1">
+          <mxGeometry y="260" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oaVjwqw6s1-pKj54w-7b-2" value="" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.56;entryY=1.03;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="RvLsSPAhDAN_56T7TWkN-16" target="RvLsSPAhDAN_56T7TWkN-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="330" as="sourcePoint" />
+            <mxPoint x="310" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-2" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="190" as="sourcePoint" />
+            <mxPoint x="190" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-3" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="330" as="sourcePoint" />
+            <mxPoint x="190" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-5" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="610" as="sourcePoint" />
+            <mxPoint x="638" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-6" value="Remote Terminal" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="700" width="160" height="180" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-7" value="- Min/Max Temp&#xa;&#xa;- Min/Max Current&#xa;&#xa;- Min Max Voltage&#xa;&#xa;- Reset&#xa;&#xa; " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_NM1RZbg6b0pwU-6u-P-6" vertex="1">
+          <mxGeometry y="26" width="160" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-8" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="Z_NM1RZbg6b0pwU-6u-P-6" vertex="1">
+          <mxGeometry y="140" width="160" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-9" value="+ userPrompt()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_NM1RZbg6b0pwU-6u-P-6" vertex="1">
+          <mxGeometry y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;endSize=20;strokeWidth=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="300" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint x="420" y="610" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-13" value="Data Log" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="430" width="160" height="190" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-14" value="- Min/Max Temp&#xa;&#xa;- Min/Max Current&#xa;&#xa;- Min Max Voltage&#xa;&#xa;- Temp/Current/Voltage &#xa;Update&#xa;&#xa; " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_NM1RZbg6b0pwU-6u-P-13" vertex="1">
+          <mxGeometry y="26" width="160" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-15" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="Z_NM1RZbg6b0pwU-6u-P-13" vertex="1">
+          <mxGeometry y="140" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-16" value="+ updateEEPROM()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_NM1RZbg6b0pwU-6u-P-13" vertex="1">
+          <mxGeometry y="160" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;endSize=20;strokeWidth=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="Z_NM1RZbg6b0pwU-6u-P-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="650" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="650" />
+            </Array>
+            <mxPoint x="611.17" y="710" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-19" value="" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="RvLsSPAhDAN_56T7TWkN-25" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="670" as="sourcePoint" />
+            <mxPoint x="501" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-20" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="670" as="sourcePoint" />
+            <mxPoint x="190" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_NM1RZbg6b0pwU-6u-P-21" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="810" as="sourcePoint" />
+            <mxPoint x="220" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
